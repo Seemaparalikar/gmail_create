@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Create your Google Account</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body.groove {
+  border: 1px solid;
+  margin: 100px;
+  padding: 50px;
+}
+	
+input[type=text] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+
+.button {
+  background-color: white; 
+  border: none;
+  color: blue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: blue; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: white; 
+  border: none;
+  color: gray;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+ p.para_info{
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+</style>
+</head>
+
+<body class="groove">
+<h1>Create your Google Account  </h1>
+<h2>to continue to Gmail</h2>
+
+<form action="file:///C:/Users/seema/OneDrive/Desktop/HTML/Gmail_next/Gmail_next.html" name="myForm" onsubmit="return(validate());">
+  <input type="text" id="fname" name="fname" placeholder="First name" value="" >
+  <input type="text" id="lname" name="lname" placeholder="Last name" value="" ><br>
+  <input type="text" id="uname" name="uname" placeholder="Username@gmail.com" value=""><br>
+  <p class="para_info">You can use numbers, letters &amp periods</p>
+  <input type="text" id="pwd" name="pwd" placeholder="Password" value="" >
+  <input type="text" id="conf" name="conf" placeholder="Confirm" value="" >
+  <p class="para_info">Use 8 or more characters with a mix of letters, numbers &amp symbols</p>
+
+  <input type="checkbox" id="password" name="password" value="Password">
+  <label for="password"> Show password</label><br>
+
+  <button class="button">Sign in instead</button>
+  <input class="button1" type="submit" value="Next"><br>
+</form> 
+
+<footer>
+<div class="dropdown">
+  <button class="dropbtn">English (United States)</button>
+  <div class="dropdown-content">
+  <a href="#">Afrikaans</a>
+  <a href="#">Dansk</a>
+  <a href="#">Deutsch</a>
+  </div>
+</div>
+
+<a href="gmail_help.html" target="_blank">Help</a>
+
+<a href="gmail_privacy.html" target="_blank">Privacy</a>
+
+<a href="gmail_terms.html" target="_blank">Terms</a>
+
+<!--<a href="https://support.google.com/accounts?hl=en" target="_blank">Help</a>
+
+<button type="button" onclick="myFunction()">Try it</button> 
+
+<button class="button2">Privacy</button>
+<a href="https://policies.google.com/privacy?gl=US&hl=en" target="_blank">Privacy</a>
+
+<button class="button2">Terms</button>
+<a href="https://policies.google.com/terms?gl=US&hl=en" target="_blank">Terms</a>
+-->
+
+</footer>
+
+
+
+<script type = "text/javascript">
+      // Form validation code will come here.
+      function validate() {
+		   if(( document.myForm.fname.value == "" ) && ( document.myForm.lname.value == "" )) {
+            alert( "Enter First and last names" );
+            document.myForm.fname.focus() ;
+            document.myForm.lname.focus() ;
+            return false;
+         }
+         if( document.myForm.fname.value == "" ) {
+            alert( "Enter first names" );
+            document.myForm.fname.focus() ;
+            return false;
+         }
+         if( document.myForm.lname.value == "" ) {
+            alert( "Enter last names" );
+            document.myForm.lname.focus() ;
+            return false;
+         }
+         if( document.myForm.uname.value == "" ) {
+            alert( "Choose a Gmail address" );
+            document.myForm.uname.focus() ;
+            return false;
+         }
+         if( document.myForm.pwd.value == "" ) {
+            alert( "Enter a Password" );
+            document.myForm.pwd.focus() ;
+            return false;
+         }
+         if( document.myForm.conf.value == "" ) {
+            alert( "Confirm the Password" );
+            document.myForm.conf.focus() ;
+            return false;
+         }		 
+         return( true );
+      }
+</script>
+
+</body>
+</html>
